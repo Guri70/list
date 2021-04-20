@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="25dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Search..."
+                android:imeOptions="actionDone"
+                android:id="@+id/et_search"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:id="@+id/checkbox"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/holo_red_dark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Select All"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recycler_list"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text=""
+        android:id="@+id/tv_names"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12dp" />
+
+</LinearLayout>
